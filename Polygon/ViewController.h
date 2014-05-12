@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PolygonDatasource.h"
+#import "PolygonDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<PolygonDatasource,PolygonDelegate>
 
 @end

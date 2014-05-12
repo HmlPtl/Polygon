@@ -21,6 +21,8 @@
 		AA58220E192141DE00D0D42D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5821F0192141DE00D0D42D /* UIKit.framework */; };
 		AA582216192141DE00D0D42D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA582214192141DE00D0D42D /* InfoPlist.strings */; };
 		AA582218192141DE00D0D42D /* PolygonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA582217192141DE00D0D42D /* PolygonTests.m */; };
+		AA582222192141F000D0D42D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA582221192141F000D0D42D /* QuartzCore.framework */; };
+		AA5822291921420C00D0D42D /* libPolygonChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5822231921420C00D0D42D /* libPolygonChart.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,12 @@
 		AA582213192141DE00D0D42D /* PolygonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolygonTests-Info.plist"; sourceTree = "<group>"; };
 		AA582215192141DE00D0D42D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA582217192141DE00D0D42D /* PolygonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolygonTests.m; sourceTree = "<group>"; };
+		AA582221192141F000D0D42D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AA5822231921420C00D0D42D /* libPolygonChart.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolygonChart.a; sourceTree = "<group>"; };
+		AA5822261921420C00D0D42D /* PolygonDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonDatasource.h; sourceTree = "<group>"; };
+		AA5822271921420C00D0D42D /* PolygonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonDelegate.h; sourceTree = "<group>"; };
+		AA5822281921420C00D0D42D /* PolygonShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShapeLayer.h; sourceTree = "<group>"; };
+		AA58222B1921431F00D0D42D /* PolygonComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonComponentView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA582222192141F000D0D42D /* QuartzCore.framework in Frameworks */,
 				AA5821EF192141DE00D0D42D /* CoreGraphics.framework in Frameworks */,
+				AA5822291921420C00D0D42D /* libPolygonChart.a in Frameworks */,
 				AA5821F1192141DE00D0D42D /* UIKit.framework in Frameworks */,
 				AA5821ED192141DE00D0D42D /* Foundation.framework in Frameworks */,
 			);
@@ -101,6 +111,7 @@
 		AA5821EB192141DE00D0D42D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA582221192141F000D0D42D /* QuartzCore.framework */,
 				AA5821EC192141DE00D0D42D /* Foundation.framework */,
 				AA5821EE192141DE00D0D42D /* CoreGraphics.framework */,
 				AA5821F0192141DE00D0D42D /* UIKit.framework */,
@@ -112,6 +123,8 @@
 		AA5821F2192141DE00D0D42D /* Polygon */ = {
 			isa = PBXGroup;
 			children = (
+				AA5822231921420C00D0D42D /* libPolygonChart.a */,
+				AA5822241921420C00D0D42D /* PolygonChart */,
 				AA5821FB192141DE00D0D42D /* AppDelegate.h */,
 				AA5821FC192141DE00D0D42D /* AppDelegate.m */,
 				AA5821FE192141DE00D0D42D /* Main.storyboard */,
@@ -150,6 +163,17 @@
 				AA582214192141DE00D0D42D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA5822241921420C00D0D42D /* PolygonChart */ = {
+			isa = PBXGroup;
+			children = (
+				AA58222B1921431F00D0D42D /* PolygonComponentView.h */,
+				AA5822261921420C00D0D42D /* PolygonDatasource.h */,
+				AA5822271921420C00D0D42D /* PolygonDelegate.h */,
+				AA5822281921420C00D0D42D /* PolygonShapeLayer.h */,
+			);
+			path = PolygonChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +405,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Polygon/Polygon-Prefix.pch";
 				INFOPLIST_FILE = "Polygon/Polygon-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Polygon",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +422,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Polygon/Polygon-Prefix.pch";
 				INFOPLIST_FILE = "Polygon/Polygon-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Polygon",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
