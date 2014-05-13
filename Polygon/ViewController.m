@@ -29,7 +29,7 @@
     [self.view addSubview:componentView];
 }
 -(NSInteger)numberOfLayersInPolygonView:(PolygonComponentView *)view{
-    return 3;
+    return 6;
 }
 -(UIColor *)colorForLayerAtIndex:(NSInteger)index inPolygonView:(PolygonComponentView *)view{
     if (index == 0) {
