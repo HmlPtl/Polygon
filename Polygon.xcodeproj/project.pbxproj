@@ -490,6 +490,7 @@
 				AA58221D192141DE00D0D42D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA58221E192141DE00D0D42D /* Build configuration list for PBXNativeTarget "PolygonTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				AA582220192141DE00D0D42D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
