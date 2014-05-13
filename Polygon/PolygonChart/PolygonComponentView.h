@@ -1,9 +1,4 @@
-//
-//  A3PolygonComponentView.h
-//  A3PolygonComponent
-//
-//  Created by macravytech4 on 21/08/13.
-//  Copyright (c) 2013 macravytech4. All rights reserved.
+
 //
 
 #import <UIKit/UIKit.h>
